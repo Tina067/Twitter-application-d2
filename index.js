@@ -321,7 +321,7 @@ const port = process.env.PORT;
 // }));
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://twitter-application-d2-frontend-u9u4.vercel.app'],
+  origin: ['http://localhost:3000', 'https://twitter-application-d2-frontend-u9u4.vercel.app','https://twitter-application-d2-frontend-33tt.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
