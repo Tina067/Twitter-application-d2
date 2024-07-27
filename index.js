@@ -315,7 +315,7 @@ const otpRouter = require('./routes/otp');
 const port = process.env.PORT;
 
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow requests from your frontend
+  origin: ['http://localhost:3000', 'https://twitter-application-d2-frontend-nce6.vercel.app'],  // Allow requests from your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
