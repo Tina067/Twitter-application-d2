@@ -314,11 +314,18 @@ const bodyParser = require('body-parser');
 const otpRouter = require('./routes/otp');
 const port = process.env.PORT;
 
+// app.use(cors({
+//   origin: ['http://localhost:3000', 'https://twitter-application-d2-frontend-u9u4.vercel.app/'],  // Allow requests from your frontend
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization']
+// }));
+
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://twitter-application-d2-frontend-nce6.vercel.app'],  // Allow requests from your frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: ['http://localhost:3000', 'https://twitter-application-d2-frontend-u9u4.vercel.app'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.use('/api/otp', otpRouter);
